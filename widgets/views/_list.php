@@ -18,7 +18,7 @@ use yii2mod\editable\Editable;
                 <?php if (Yii::$app->getUser()->can('admin')) : ?>
                     <?php echo Html::a('<span class="glyphicon glyphicon-trash"></span> ' . Yii::t('yii2mod.comments', 'Delete'), '#', ['class' => 'delete-comment-btn', 'data' => ['action' => 'delete', 'url' => Url::to(['/comment/default/delete', 'id' => $model->id]), 'comment-id' => $model->id]]); ?>
                 <?php endif; ?>
-                <?php if (!Yii::$app->user->isGuest && ($model->level < $maxLevel || is_null($maxLevel))) : ?>
+                <?php if (!Yii::$app->customer->isGuest && ($model->level < $maxLevel || is_null($maxLevel))) : ?>
                     <?php echo Html::a("<span class='glyphicon glyphicon-share-alt'></span> " . Yii::t('yii2mod.comments', 'Reply'), '#', ['class' => 'reply-comment-btn', 'data' => ['action' => 'reply', 'comment-id' => $model->id]]); ?>
                 <?php endif; ?>
             </div>

@@ -109,7 +109,9 @@ class DefaultController extends Controller
         $event = Yii::createObject(['class' => CommentEvent::class, 'commentModel' => $commentModel]);
         $commentModel->setAttributes($this->getCommentAttributesFromEntity($entity));
         $this->trigger(self::EVENT_BEFORE_CREATE, $event);
+
         if ($commentModel->load(Yii::$app->request->post()) && $commentModel->saveComment()) {
+
             $this->trigger(self::EVENT_AFTER_CREATE, $event);
 
             return ['status' => 'success'];

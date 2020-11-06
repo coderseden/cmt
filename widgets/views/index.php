@@ -42,7 +42,7 @@ use yii\widgets\Pjax;
                 ],
                 $listViewConfig
             )); ?>
-            <?php if (!Yii::$app->user->isGuest) : ?>
+            <?php if (!Yii::$app->customer->isGuest) : ?>
                 <?php echo $this->render('_form', [
                     'commentModel' => $commentModel,
                     'formId' => $formId,
