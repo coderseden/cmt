@@ -1,14 +1,14 @@
 <?php
 
-namespace yii2mod\comments\models\search;
+namespace coderseden\cmt\models\search;
 
 use yii\data\ActiveDataProvider;
-use yii2mod\comments\models\CommentModel;
+use coderseden\cmt\models\CommentModel;
 
 /**
  * Class CommentSearch
  *
- * @package yii2mod\comments\models\search
+ * @package coderseden\cmt\models\search
  */
 class CommentSearch extends CommentModel
 {

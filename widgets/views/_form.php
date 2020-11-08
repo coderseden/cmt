@@ -5,7 +5,7 @@ use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 
 /* @var $this \yii\web\View */
-/* @var $commentModel \yii2mod\comments\models\CommentModel */
+/* @var $commentModel \coderseden\cmt\models\CommentModel */
 /* @var $encryptedEntity string */
 /* @var $formId string comment form id */
 ?>

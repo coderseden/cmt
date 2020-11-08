@@ -1,6 +1,6 @@
 <?php
 
-namespace yii2mod\comments\controllers;
+namespace coderseden\cmt\controllers;
 
 use Yii;
 use yii\filters\AccessControl;
@@ -11,15 +11,15 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\web\Response;
 use yii\widgets\ActiveForm;
-use yii2mod\comments\events\CommentEvent;
-use yii2mod\comments\models\CommentModel;
-use yii2mod\comments\traits\ModuleTrait;
+use coderseden\cmt\events\CommentEvent;
+use coderseden\cmt\models\CommentModel;
+use coderseden\cmt\traits\ModuleTrait;
 use yii2mod\editable\EditableAction;
 
 /**
  * Class DefaultController
  *
- * @package yii2mod\comments\controllers
+ * @package coderseden\cmt\controllers
  */
 class DefaultController extends Controller
 {
@@ -27,25 +27,25 @@ class DefaultController extends Controller
 
     /**
      * Event is triggered before creating a new comment.
-     * Triggered with yii2mod\comments\events\CommentEvent
+     * Triggered with coderseden\cmt\events\CommentEvent
      */
     const EVENT_BEFORE_CREATE = 'beforeCreate';
 
     /**
      * Event is triggered after creating a new comment.
-     * Triggered with yii2mod\comments\events\CommentEvent
+     * Triggered with coderseden\cmt\events\CommentEvent
      */
     const EVENT_AFTER_CREATE = 'afterCreate';
 
     /**
      * Event is triggered before deleting the comment.
-     * Triggered with yii2mod\comments\events\CommentEvent
+     * Triggered with coderseden\cmt\events\CommentEvent
      */
     const EVENT_BEFORE_DELETE = 'beforeDelete';
 
     /**
      * Event is triggered after deleting the comment.
-     * Triggered with yii2mod\comments\events\CommentEvent
+     * Triggered with coderseden\cmt\events\CommentEvent
      */
     const EVENT_AFTER_DELETE = 'afterDelete';
 
@@ -109,9 +109,7 @@ class DefaultController extends Controller
         $event = Yii::createObject(['class' => CommentEvent::class, 'commentModel' => $commentModel]);
         $commentModel->setAttributes($this->getCommentAttributesFromEntity($entity));
         $this->trigger(self::EVENT_BEFORE_CREATE, $event);
-
         if ($commentModel->load(Yii::$app->request->post()) && $commentModel->saveComment()) {
-
             $this->trigger(self::EVENT_AFTER_CREATE, $event);
 
             return ['status' => 'success'];

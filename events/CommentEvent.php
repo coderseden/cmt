@@ -1,14 +1,14 @@
 <?php
 
-namespace yii2mod\comments\events;
+namespace coderseden\cmt\events;
 
 use yii\base\Event;
-use yii2mod\comments\models\CommentModel;
+use coderseden\cmt\models\CommentModel;
 
 /**
  * Class CommentEvent
  *
- * @package yii2mod\comments\events
+ * @package coderseden\cmt\events
  */
 class CommentEvent extends Event
 {

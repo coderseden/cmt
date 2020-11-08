@@ -1,16 +1,16 @@
 <?php
 
-namespace yii2mod\comments\models;
+namespace coderseden\cmt\models;
 
 use paulzi\adjacencyList\AdjacencyListBehavior;
 use Yii;
-use yii2mod\comments\behaviors\BlameableBehavior;
+use yii\behaviors\BlameableBehavior;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveQuery;
 use yii\db\ActiveRecord;
 use yii\helpers\ArrayHelper;
 use yii2mod\behaviors\PurifyBehavior;
-use yii2mod\comments\traits\ModuleTrait;
+use coderseden\cmt\traits\ModuleTrait;
 use yii2mod\moderation\enums\Status;
 use yii2mod\moderation\ModerationBehavior;
 use yii2mod\moderation\ModerationQuery;
@@ -220,9 +220,6 @@ class CommentModel extends ActiveRecord
      */
     public function getAuthor()
     {
-	    if (app()->getModule('comment')->params['commentsIdentityPrimaryId']) {
-		    return $this->hasOne($this->getModule()->userIdentityClass, [app()->getModule('comment')->params['commentsIdentityPrimaryId'] => 'createdBy']);
-	    }
         return $this->hasOne($this->getModule()->userIdentityClass, ['id' => 'createdBy']);
     }
 

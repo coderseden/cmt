@@ -5,7 +5,7 @@ use yii\widgets\ListView;
 use yii\widgets\Pjax;
 
 /* @var $this \yii\web\View */
-/* @var $commentModel \yii2mod\comments\models\CommentModel */
+/* @var $commentModel \coderseden\cmt\models\CommentModel */
 /* @var $maxLevel null|integer comments max level */
 /* @var $encryptedEntity string */
 /* @var $pjaxContainerId string */
@@ -42,7 +42,7 @@ use yii\widgets\Pjax;
                 ],
                 $listViewConfig
             )); ?>
-            <?php if (!Yii::$app->customer->isGuest) : ?>
+            <?php if (!Yii::$app->user->isGuest) : ?>
                 <?php echo $this->render('_form', [
                     'commentModel' => $commentModel,
                     'formId' => $formId,

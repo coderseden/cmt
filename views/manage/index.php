@@ -8,8 +8,8 @@ use yii2mod\moderation\enums\Status;
 
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-/* @var $searchModel \yii2mod\comments\models\search\CommentSearch */
-/* @var $commentModel \yii2mod\comments\models\CommentModel */
+/* @var $searchModel \coderseden\cmt\models\search\CommentSearch */
+/* @var $commentModel \coderseden\cmt\models\CommentModel */
 
 $this->title = Yii::t('yii2mod.comments', 'Comments Management');
 $this->params['breadcrumbs'][] = $this->title;

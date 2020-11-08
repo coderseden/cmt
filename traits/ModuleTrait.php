@@ -1,14 +1,14 @@
 <?php
 
-namespace yii2mod\comments\traits;
+namespace coderseden\cmt\traits;
 
 use Yii;
-use yii2mod\comments\Module;
+use coderseden\cmt\Module;
 
 /**
  * Class ModuleTrait
  *
- * @package yii2mod\comments\traits
+ * @package coderseden\cmt\traits
  */
 trait ModuleTrait
 {

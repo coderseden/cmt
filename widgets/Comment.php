@@ -1,20 +1,20 @@
 <?php
 
-namespace yii2mod\comments\widgets;
+namespace coderseden\cmt\widgets;
 
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\base\Widget;
 use yii\data\ArrayDataProvider;
 use yii\helpers\Json;
-use yii2mod\comments\CommentAsset;
-use yii2mod\comments\models\CommentModel;
-use yii2mod\comments\traits\ModuleTrait;
+use coderseden\cmt\CommentAsset;
+use coderseden\cmt\models\CommentModel;
+use coderseden\cmt\traits\ModuleTrait;
 
 /**
  * Class Comment
  *
- * @package yii2mod\comments\widgets
+ * @package coderseden\cmt\widgets
  */
 class Comment extends Widget
 {
@@ -34,7 +34,7 @@ class Comment extends Widget
     /**
      * @var string the view file that will render the comment tree and form for posting comments
      */
-    public $commentView = '@vendor/yii2mod/yii2-comments/widgets/views/index';
+    public $commentView = '@vendor/coderseden/cmt/widgets/views/index';
 
     /**
      * @var string comment form id

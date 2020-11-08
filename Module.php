@@ -1,13 +1,13 @@
 <?php
 
-namespace yii2mod\comments;
+namespace coderseden\cmt;
 
 use Yii;
 
 /**
  * Class Module
  *
- * @package yii2mod\comments
+ * @package coderseden\cmt
  */
 class Module extends \yii\base\Module
 {
@@ -17,14 +17,14 @@ class Module extends \yii\base\Module
     public $userIdentityClass;
 
     /**
-     * @var string the class name of the comment model object, by default its yii2mod\comments\models\CommentModel
+     * @var string the class name of the comment model object, by default its coderseden\cmt\models\CommentModel
      */
-    public $commentModelClass = 'yii2mod\comments\models\CommentModel';
+    public $commentModelClass = 'coderseden\cmt\models\CommentModel';
 
     /**
      * @var string the namespace that controller classes are in
      */
-    public $controllerNamespace = 'yii2mod\comments\controllers';
+    public $controllerNamespace = 'coderseden\cmt\controllers';
 
     /**
      * @var bool when admin can edit comments on frontend
@@ -37,8 +37,9 @@ class Module extends \yii\base\Module
     public function init()
     {
         parent::init();
+
         if (null === $this->userIdentityClass) {
-            $this->userIdentityClass = ($this->params['commentsIdentityClass']) ? $this->params['commentsIdentityClass'] : Yii::$app->getUser()->identityClass;
+            $this->userIdentityClass = Yii::$app->getUser()->identityClass;
         }
     }
 }

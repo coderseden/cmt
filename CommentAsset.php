@@ -1,20 +1,20 @@
 <?php
 
-namespace yii2mod\comments;
+namespace coderseden\cmt;
 
 use yii\web\AssetBundle;
 
 /**
  * Class CommentAsset
  *
- * @package yii2mod\comments
+ * @package coderseden\cmt
  */
 class CommentAsset extends AssetBundle
 {
     /**
      * @inheritdoc
      */
-    public $sourcePath = '@vendor/yii2mod/yii2-comments/assets';
+    public $sourcePath = '@vendor/coderseden/cmt/assets';
 
     /**
      * @inheritdoc

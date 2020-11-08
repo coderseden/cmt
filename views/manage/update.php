@@ -6,7 +6,7 @@ use yii\widgets\ActiveForm;
 use yii2mod\moderation\enums\Status;
 
 /* @var $this yii\web\View */
-/* @var $model \yii2mod\comments\models\CommentModel */
+/* @var $model \coderseden\cmt\models\CommentModel */
 /* @var $form yii\widgets\ActiveForm */
 
 $this->title = Yii::t('yii2mod.comments', 'Update Comment: {0}', $model->id);

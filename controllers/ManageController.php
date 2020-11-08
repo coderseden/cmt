@@ -1,17 +1,17 @@
 <?php
 
-namespace yii2mod\comments\controllers;
+namespace coderseden\cmt\controllers;
 
 use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii2mod\comments\models\CommentModel;
-use yii2mod\comments\traits\ModuleTrait;
+use coderseden\cmt\models\CommentModel;
+use coderseden\cmt\traits\ModuleTrait;
 
 /**
  * Class ManageController
  *
- * @package yii2mod\comments\controllers
+ * @package coderseden\cmt\controllers
  */
 class ManageController extends Controller
 {
@@ -20,17 +20,17 @@ class ManageController extends Controller
     /**
      * @var string path to index view file, which is used in admin panel
      */
-    public $indexView = '@vendor/yii2mod/yii2-comments/views/manage/index';
+    public $indexView = '@vendor/coderseden/cmt/views/manage/index';
 
     /**
      * @var string path to update view file, which is used in admin panel
      */
-    public $updateView = '@vendor/yii2mod/yii2-comments/views/manage/update';
+    public $updateView = '@vendor/coderseden/cmt/views/manage/update';
 
     /**
      * @var string search class name for searching
      */
-    public $searchClass = 'yii2mod\comments\models\search\CommentSearch';
+    public $searchClass = 'coderseden\cmt\models\search\CommentSearch';
 
     /**
      * @var array verb filter config
