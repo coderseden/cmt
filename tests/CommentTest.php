@@ -1,20 +1,20 @@
 <?php
 
-namespace yii2mod\comments\tests;
+namespace coderseden\cmt\tests;
 
 use Yii;
 use yii\base\Event;
 use yii\helpers\Json;
-use yii2mod\comments\models\CommentModel;
-use yii2mod\comments\tests\data\DefaultController;
-use yii2mod\comments\tests\data\PostModel;
-use yii2mod\comments\tests\data\User;
+use coderseden\cmt\models\CommentModel;
+use coderseden\cmt\tests\data\DefaultController;
+use coderseden\cmt\tests\data\PostModel;
+use coderseden\cmt\tests\data\User;
 use yii2mod\moderation\enums\Status;
 
 /**
  * Class CommentTest
  *
- * @package yii2mod\comments\tests
+ * @package coderseden\cmt\tests
  */
 class CommentTest extends TestCase
 {

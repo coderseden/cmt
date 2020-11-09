@@ -1,13 +1,13 @@
 <?php
 
-namespace yii2mod\comments\tests\data;
+namespace coderseden\cmt\tests\data;
 
 /**
  * Class DefaultController
  *
- * @package yii2mod\comments\tests\data
+ * @package coderseden\cmt\tests\data
  */
-class DefaultController extends \yii2mod\comments\controllers\DefaultController
+class DefaultController extends \coderseden\cmt\controllers\DefaultController
 {
     public function behaviors()
     {

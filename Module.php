@@ -39,7 +39,7 @@ class Module extends \yii\base\Module
         parent::init();
 
         if (null === $this->userIdentityClass) {
-            $this->userIdentityClass = Yii::$app->getUser()->identityClass;
+	        $this->userIdentityClass = ($this->params['commentsIdentityClass']) ? $this->params['commentsIdentityClass'] : Yii::$app->getUser()->identityClass;
         }
     }
 }

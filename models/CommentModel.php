@@ -4,7 +4,7 @@ namespace coderseden\cmt\models;
 
 use paulzi\adjacencyList\AdjacencyListBehavior;
 use Yii;
-use yii\behaviors\BlameableBehavior;
+use coderseden\cmt\behaviors\BlameableBehavior;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveQuery;
 use yii\db\ActiveRecord;
@@ -220,6 +220,10 @@ class CommentModel extends ActiveRecord
      */
     public function getAuthor()
     {
+	    if (app()->getModule('comment')->params['commentsIdentityPrimaryId']) {
+		    return $this->hasOne($this->getModule()->userIdentityClass, [app()->getModule('comment')->params['commentsIdentityPrimaryId'] => 'createdBy']);
+	    }
+
         return $this->hasOne($this->getModule()->userIdentityClass, ['id' => 'createdBy']);
     }
 

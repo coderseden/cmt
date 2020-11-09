@@ -1,6 +1,6 @@
 <?php
 
-namespace yii2mod\comments\behaviors;
+namespace coderseden\cmt\behaviors;
 
 use Yii;
 use yii\db\BaseActiveRecord;

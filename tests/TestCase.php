@@ -1,6 +1,6 @@
 <?php
 
-namespace yii2mod\comments\tests;
+namespace coderseden\cmt\tests;
 
 use Yii;
 use yii\helpers\ArrayHelper;
@@ -49,7 +49,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
                     'scriptUrl' => 'index.php',
                 ],
                 'user' => [
-                    'identityClass' => 'yii2mod\comments\tests\data\User',
+                    'identityClass' => 'coderseden\cmt\tests\data\User',
                 ],
                 'i18n' => [
                     'translations' => [
@@ -62,9 +62,9 @@ class TestCase extends \PHPUnit\Framework\TestCase
             ],
             'modules' => [
                 'comment' => [
-                    'class' => 'yii2mod\comments\Module',
+                    'class' => 'coderseden\cmt\Module',
                     'userIdentityClass' => '',
-                    'controllerNamespace' => 'yii2mod\comments\tests\data',
+                    'controllerNamespace' => 'coderseden\cmt\tests\data',
                 ],
             ],
         ], $config));

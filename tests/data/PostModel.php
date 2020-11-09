@@ -1,13 +1,13 @@
 <?php
 
-namespace yii2mod\comments\tests\data;
+namespace coderseden\cmt\tests\data;
 
 use yii\db\ActiveRecord;
 
 /**
  * Class PostModel
  *
- * @package yii2mod\comments\tests\data
+ * @package coderseden\cmt\tests\data
  */
 class PostModel extends ActiveRecord
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace yii2mod\comments\tests\data;
+namespace coderseden\cmt\tests\data;
 
 use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
